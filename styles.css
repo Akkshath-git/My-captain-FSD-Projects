@@ -23,7 +23,7 @@ h1, h2, h3 {
   line-height: 1.15;
 }
 
-/* every section sets its own background — nothing relies on inheriting from body */
+
 .navbar,
 .hero-section,
 .features-section,
