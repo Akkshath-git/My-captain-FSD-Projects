@@ -8,9 +8,6 @@ who train consistently but don't have a coach monitoring their vitals.
 
 This is Mini Project 1 for the My Captain Full Stack Web Development course.
 
-## 🔗 Live Demo
-https://Akkshath-git.github.io/pulse-landing-page/
-
 ## 🛠️ Built With
 - HTML5
 - CSS3 (custom design tokens, animations)
@@ -28,12 +25,6 @@ pulse-landing-page/
 ├── index.html
 ├── styles.css
 └── README.md
-## 🚀 Getting Started
-1. Clone the repository:
-```bash
-   git clone https://github.com/YOUR-USERNAME/pulse-landing-page.git
-```
-2. Open `index.html` in your browser — no build step required.
 
 ## 📖 About This Project
 This landing page was designed and built as part of a frontend development
@@ -42,4 +33,4 @@ drafting, and usability review while the final design decisions and code
 remain my own.
 
 ## 👤 Author
-Akkshath — B.Tech CSE, SRM Institute of Science and Technology (KTR)
+Akkshath Magar
