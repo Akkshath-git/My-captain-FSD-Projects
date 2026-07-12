@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pulse — trains with your body, not against it</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-dark">
+    <div class="container d-flex justify-content-between">
+      <span class="navbar-brand mb-0 logo">Pulse</span>
+      <a href="#signup" class="btn btn-pulse rounded-pill">Get early access</a>
+    </div>
+  </nav>
+
+  <section class="text-center hero-section py-5">
+    <div class="container">
+      <h1 class="fw-bold mb-3 hero-title">Your body already knows today's workout. Pulse just listens.</h1>
+      <p class="mb-4 hero-sub mx-auto">A smart fitness companion that reads your heart rate and recovery in real time, then adjusts your training intensity as you move — no fixed plan, no guesswork.</p>
+      <div class="d-flex justify-content-center gap-3 flex-wrap mb-5">
+        <a href="#signup" class="btn btn-pulse btn-lg">Start training smarter</a>
+        <a href="#how" class="btn btn-outline-light btn-lg">See how it adapts</a>
+      </div>
+
+      <svg class="pulse-line" viewBox="0 0 720 140" role="img" aria-label="A line graph showing workout intensity shifting through three effort zones">
+        <path class="pulse-path p1" d="M0,90 L100,90 L120,40 L140,110 L160,90 L260,90" />
+        <path class="pulse-path p2" d="M260,90 L280,70 L300,90 L360,90 L380,30 L400,120 L420,90 L500,90" />
+        <path class="pulse-path p3" d="M500,90 L520,60 L540,20 L560,100 L580,45 L600,90 L720,90" />
+      </svg>
+    </div>
+  </section>
+
+  <section class="features-section py-5" id="how">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card h-100 p-4 border-0 feature-card">
+            <span class="badge zone-tag tag-1 mb-2">Adaptive intensity engine</span>
+            <h3 class="h5">Recalculates your zone every few minutes</h3>
+            <p class="card-text-dim">Pulse reads live heart rate and HRV during your session and nudges your target effort up or down — so a tired Tuesday gets a lighter set than a fresh Saturday.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100 p-4 border-0 feature-card">
+            <span class="badge zone-tag tag-2 mb-2">Recovery-aware scheduling</span>
+            <h3 class="h5">Flags overtraining before you feel it</h3>
+            <p class="card-text-dim">When your recovery trend dips, Pulse suggests a rest day or an easier session automatically, instead of waiting for you to burn out.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="use-cases-section py-5">
+    <div class="container">
+      <h2 class="text-center fw-bold mb-4 section-title">Built for how you actually train</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="p-4 uc-card">
+            <div class="role mb-2">Runner</div>
+            <p class="card-text-dim mb-0">Keeps you in the right pace zone on hills and heat, instead of a flat pace target that ignores conditions.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 uc-card">
+            <div class="role mb-2">Lifter</div>
+            <p class="card-text-dim mb-0">Suggests when to add a set and when to cut the session short based on how you're actually recovering between lifts.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 uc-card">
+            <div class="role mb-2">Beginner</div>
+            <p class="card-text-dim mb-0">Removes the guesswork of "how hard should this feel" with a simple live zone readout.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="text-center py-5 trust-section">
+    <div class="container">
+      <div class="stat-number" id="stat-number">12,400</div>
+      <p class="card-text-dim mb-0">workouts adapted in real time this week</p>
+    </div>
+  </section>
+
+  <section class="text-center py-5 hero-section" id="signup">
+    <div class="container">
+      <h2 class="fw-bold mb-4 final-cta-title">Train with your body, not against it.</h2>
+      <a href="#" class="btn btn-pulse btn-lg rounded-pill">Get early access</a>
+    </div>
+  </section>
+
+  <footer class="text-center py-3 footer-section">
+    Pulse — a fictional product built for a landing page project.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <script>
+    const statEl = document.getElementById('stat-number');
+    const target = 12400;
+    let current = 0;
+    const step = Math.ceil(target / 60);
+
+    function countUp() {
+      current += step;
+      if (current >= target) {
+        statEl.textContent = target.toLocaleString();
+        return;
+      }
+      statEl.textContent = current.toLocaleString();
+      requestAnimationFrame(countUp);
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          countUp();
+          observer.disconnect();
+        }
+      });
+    }, { threshold: 0.5 });
+
+    observer.observe(statEl);
+  </script>
+</body>
+</html>
